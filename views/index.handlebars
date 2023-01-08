@@ -1,0 +1,27 @@
+<div class="jumbotron p-5" style="background-color: #e6ecef;">
+    <h1 class="display-4">Bem-vindo ao blog do node!</h1>
+    <p class="lead">Esse é um <strong>Blog</strong> simples, desenvolvido com Nodejs, Express e Mongodb</p>
+    <hr class="my-4">
+    <p>Aqui você encontrará conteúdos sobre o mundo da computação</p>
+    <a class="btn btn-success btn-lg" href="#" role="button">Crie uma conta</a>
+</div>
+<hr>
+<h2 class="display-5">Postagens recentes: </h2>
+<div class="cards">
+    {{#each postagens}}
+    <div class="card my-4">
+        <div class="card-body">
+            <h3>{{titulo}}</h3>
+            <p>{{descricao}}</p>
+            <a href="/postagem/{{slug}}">
+                <button class="btn btn-success">Leia mais</button>
+            </a>
+            <hr>
+            <small>Categoria: {{categoria.nome}}</small> <br>
+            <small>Data de publicação: {{data}}</small>
+        </div>
+    </div>
+    {{else}}
+    <h5>Nenhuma postagem</h5>
+    {{/each}}
+</div>
