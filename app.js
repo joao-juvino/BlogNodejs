@@ -7,6 +7,7 @@ const admin = require("./routes/adimin")
 const path = require("path")
 const session = require("express-session")
 const flash = require("connect-flash")
+const usuarios = require("./routes/usuario")
 
 require("./models/Postagem")
 const PostagemSchema = mongoose.model("postagens")
@@ -131,6 +132,8 @@ app.get("/categorias/:slug", (req, res, next) => {
 })
 
 app.use("/admin", admin)
+
+app.use("/usuarios", usuarios)
 
 /* Outros */
 app.listen(port, () => {

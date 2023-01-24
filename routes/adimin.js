@@ -36,7 +36,7 @@ router.get("/categorias/add", (req, res, next) => [
 router.post("/categorias/nova", (req, res, next) => {
 
     // Validação da categoria
-    var erros = []
+    const erros = []
 
     const nome = req.body.nome
     const slug = req.body.slug
@@ -149,7 +149,7 @@ router.get("/postagens/add", (req, res, next) => {
 
 router.post("/postagens/nova", (req, res, next) => {
     // Validação da categoria
-    var erros = []
+    const erros = []
 
     const titulo = req.body.titulo
     const slug = req.body.slug
