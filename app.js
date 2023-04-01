@@ -9,6 +9,9 @@ const session = require("express-session")
 const flash = require("connect-flash")
 const usuarios = require("./routes/usuario")
 
+// Variáveis de ambiente
+require('dotenv/config');
+
 require("./models/Postagem")
 const PostagemSchema = mongoose.model("postagens")
 
@@ -49,7 +52,7 @@ app.set("view engine", "handlebars")
 
 // Mongoose //
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://localhost/blogapp")
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
         console.log("Mongodb conectado!")
     })
