@@ -1,0 +1,5 @@
+.my-footer{
+    width: 100%;
+    background-color: var(--text-color-hard);
+    box-shadow: -1px -1px 10px var(--bg-color-medium);
+}

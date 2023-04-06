@@ -50,8 +50,9 @@ app.engine('handlebars', handlebars.engine({
 }))
 app.set("view engine", "handlebars")
 
-// Mongoose //
+// Mongoose
 mongoose.Promise = global.Promise
+// mongoose.connect("mongodb://127.0.0.1/localteste")
 mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
         console.log("Mongodb conectado!")

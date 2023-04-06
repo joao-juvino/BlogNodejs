@@ -6,15 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+
+    {{!-- Font Awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{!-- My Styles --}}
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/menu.css">
+    <link rel="stylesheet" href="/style/my-card-style.css">
+    <link rel="stylesheet" href="/style/postagem.css">
+    <link rel="stylesheet" href="/style/footer.css">
+
     <title>Blog</title>
 </head>
 
 <body>
-    {{>_navbar}}
-    <div class="container mt-4 mb-4 overflow-hidden text-break">
-        {{>_msg}}
-        {{{body}}}
+    <div class="wrapper d-flex flex-column overflow-hidden">
+        {{>_navbar}}
+        
+        <div class="container my-4 text-break">
+            {{>_msg}}
+            {{{body}}}
+        </div>
+
+        <div class="flex-grow-1"></div>
+
+        {{>_footer}}
     </div>
+
+    {{!-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>

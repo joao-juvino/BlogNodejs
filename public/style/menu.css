@@ -1,0 +1,33 @@
+.navbar{
+    padding: 20px 10px;
+    box-shadow: 1px 1px 10px var(--bg-color-medium);
+}
+
+.my-btn-light{
+    background-color: transparent;
+    border: solid 1px var(--bg-color-hard);
+    color: var(--bg-color-hard);
+}
+
+.my-btn-light:hover{
+    background-color: var(--bg-color-hard);
+    border: solid 1px transparent;
+    color: white;
+}
+
+.btn-entrar:hover{
+    background-color: var(--bg-color-hard);
+    border: solid 1px transparent;
+}
+
+.my-logo{
+    padding: 0px 30px 0px 10px;
+    margin-left: 20px;
+}
+
+.my-logo a{
+    color: var(--bg-color-hard);
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: none;
+}

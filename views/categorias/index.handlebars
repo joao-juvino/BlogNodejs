@@ -1,11 +1,11 @@
-<div class="card">
+<div class="card-unico my-card my-4">
     <div class="card-body">
         <h1 class="display-5">Categorias: </h1>
         <hr>
         <div class="btn-group" role="group" aria-label="Basic example">
             {{#each categorias}}
                 <a href="/categorias/{{slug}}">
-                    <button type="button" class="btn btn-outline-success me-2">{{nome}}</button>
+                    <button type="button" >{{nome}}</button>
                 </a>
             {{else}}
                 <h4>Nenhuma categoria existente</h4>

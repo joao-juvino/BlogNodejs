@@ -1,27 +1,16 @@
-<div class="card">
+<div class="card-unico my-card">
     <div class="card-body">
         <h1 class="display-5">Categoria: {{categoria.nome}}</h1>
         <hr>
         <div class="cards">
             {{#each postagens}}
-            <div class="card my-4">
+            {{>_card}}
+            {{else}}
+            <div class="my-card my-4">
                 <div class="card-body">
-                    <h3>{{titulo}}</h3>
-                    <p>{{descricao}}</p>
-                    <a href="/postagem/{{slug}}">
-                        <button class="btn btn-success">Leia mais</button>
-                    </a>
-                    <hr>
-                    <small>Categoria: {{categoria.nome}}</small> <br>
-                    <small>Data de publicação: {{data}}</small>
+                    <h5>Nenhuma postagem possui essa categoria</h5>
                 </div>
             </div>
-            {{else}}
-                <div class="card my-4">
-                    <div class="card-body">
-                        <h5>Nenhuma postagem possui essa categoria</h5>
-                    </div>
-                </div>
             {{/each}}
         </div>
     </div>

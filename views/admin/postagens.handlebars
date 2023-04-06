@@ -1,25 +1,25 @@
-<h2>Lista de postagens</h2>
+<h2 class="mt-3">Lista de postagens</h2>
 <hr>
 <a href="/admin/postagens/add">
-    <button class="btn btn-success">Nova Postagem</button>
+    <button class="my-btn-light mt-3">Nova Postagem</button>
 </a>
 
 <div class="cards">
     {{#each postagens}}
-        <div class="card my-4">
+        <div class="my-card my-4">
             <div class="card-body">
                 <h4>{{titulo}}</h4>
                 <p>Descrição: {{descricao}}</p>
-                <small>Data: {{data}}</small> <br>
-                <small>Categoria: {{categoria.nome}}</small> <br>
+                <small><span class="small-destaque">Data: </span>{{data}}</small> <br>
+                <small><span class="small-destaque">Categoria: </span>{{categoria.nome}}</small> <br>
 
                 <div class="d-flex flex-row mt-3">
                     <a href="/admin/postagens/edit/{{_id}}" class="me-3">
-                        <button class="btn btn-success mt-3">Editar postagem</button>
+                        <button class="my-btn-light">Editar postagem</button>
                     </a>
                     <form action="/admin/postagens/deletar" method="POST">
                         <input name="id" type="hidden" value="{{_id}}">
-                        <button class="btn btn-danger mt-3">Deletar</button>
+                        <button>Deletar</button>
                     </form>
                 </div>
             </div>

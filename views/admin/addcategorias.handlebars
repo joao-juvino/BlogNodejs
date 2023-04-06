@@ -7,15 +7,15 @@
 
 {{/each}}
 
-<h2 class="mb-3">Nova categoria: </h2>
-<div class="card">
+<h2 class="my-3">Nova categoria: </h2>
+<div class="card-unico my-card my-5">
     <div class="card-body">
         <form action="/admin/categorias/nova" method="POST">
-            <label for="nome">Nome: </label>
-            <input class="form-control mb-3" type="text" id="nome" name="nome" placeholder="Nome da categoria">
-            <label for="slug">Slug: </label>
-            <input class="form-control mb-3" type="text" id="slug" name="slug" placeholder="Slug da categoria">
-            <button type="submit" class="btn btn-success">Criar categoria</button>
+            <label for="nome" class="form-label mt-3">Nome: </label>
+            <input class="form-control" type="text" id="nome" name="nome">
+            <label for="slug" class="form-label mt-3">Slug: </label>
+            <input class="form-control" type="text" id="slug" name="slug">
+            <button type="submit" class="mt-4">Criar categoria</button>
         </form>
     </div>
 </div>

@@ -13,7 +13,7 @@
   "description": "Blog",
   "main": "index.js",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   },
   "scripts": {
     "dev": "nodemon app.js",
